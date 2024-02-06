@@ -151,13 +151,13 @@ class InvoiceForm extends React.Component {
             <hr className="my-4"/>
             <Row className="mb-5">
               <Col>
-                <Form.Label className="fw-bold">Bill from:</Form.Label>
+                <Form.Label className="fw-bold">De:</Form.Label>
                 <Form.Control placeholder={"Who is this invoice from?"} rows={3} value={this.state.billFrom} type="text" name="billFrom" className="my-2" onChange={(event) => this.editField(event)} autoComplete="name" required="required"/>
                 <Form.Control placeholder={"Email address"} value={this.state.billFromEmail} type="email" name="billFromEmail" className="my-2" onChange={(event) => this.editField(event)} autoComplete="email" required="required"/>
                 <Form.Control placeholder={"Billing address"} value={this.state.billFromAddress} type="text" name="billFromAddress" className="my-2" autoComplete="address" onChange={(event) => this.editField(event)} required="required"/>
               </Col>
               <Col>
-                <Form.Label className="fw-bold">Bill to:</Form.Label>
+                <Form.Label className="fw-bold">Para:</Form.Label>
                 <Form.Control placeholder={"Who is this invoice to?"} rows={3} value={this.state.billTo} type="text" name="billTo" className="my-2" onChange={(event) => this.editField(event)} autoComplete="name" required="required"/>
                 <Form.Control placeholder={"Email address"} value={this.state.billToEmail} type="email" name="billToEmail" className="my-2" onChange={(event) => this.editField(event)} autoComplete="email" required="required"/>
                 <Form.Control placeholder={"Billing address"} value={this.state.billToAddress} type="text" name="billToAddress" className="my-2" autoComplete="address" onChange={(event) => this.editField(event)} required="required"/>
@@ -173,14 +173,14 @@ class InvoiceForm extends React.Component {
                     {this.state.subTotal}</span>
                 </div>
                 <div className="d-flex flex-row align-items-start justify-content-between mt-2">
-                  <span className="fw-bold">Discount:</span>
+                  <span className="fw-bold">Desconto:</span>
                   <span>
                     <span className="small ">({this.state.discountRate || 0}%)</span>
                     {this.state.currency}
                     {this.state.discountAmmount || 0}</span>
                 </div>
                 <div className="d-flex flex-row align-items-start justify-content-between mt-2">
-                  <span className="fw-bold">Tax:
+                  <span className="fw-bold">Taxa:
                   </span>
                   <span>
                     <span className="small ">({this.state.taxRate || 0}%)</span>
@@ -199,7 +199,7 @@ class InvoiceForm extends React.Component {
               </Col>
             </Row>
             <hr className="my-4"/>
-            <Form.Label className="fw-bold">Notes:</Form.Label>
+            <Form.Label className="fw-bold">Observações:</Form.Label>
             <Form.Control placeholder="Thank you for doing business with us!" name="notes" value={this.state.notes} onChange={(event) => this.editField(event)} as="textarea" className="my-2" rows={1}/>
           </Card>
         </Col>
